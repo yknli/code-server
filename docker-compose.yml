@@ -1,0 +1,17 @@
+services:
+  code-server:
+    image: codercom/code-server:latest
+    container_name: code-server
+    volumes:
+      - ./config:/home/coder/.config/code-server
+      - ./workspace:/home/coder/workspace
+      - ./extensions:/home/coder/.local/share/code-server
+    ports:
+      - 8081:8080
+    restart: unless-stopped
+    networks:
+      - code-server-network
+
+networks:
+  code-server-network:
+    external: false
