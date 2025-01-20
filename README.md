@@ -17,7 +17,7 @@ Before running code-server, ensure you have the following installed:
 1.  Run the `generate-hashed-password.sh` script. This script will automatically generate a hashed password and update the `config/config.yaml` file.
 
     ```bash
-    ./generate-hashed-password.sh
+    ./generate-hashed-password.sh "your-password"
     ```
 
 2.  Start the code-server using Docker Compose:
